@@ -1,0 +1,259 @@
+
+*{
+    padding: 0;
+    margin: 0;  
+
+}
+
+.first img{
+    width: 100px;
+    height: 100px;
+    animation: 2s;
+    animation-duration: 2s;
+    animation-name:opacity;
+    animation-iteration-count: infinite;
+    
+
+}
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ececec8f;
+    background-image: none;
+    
+
+}
+ 
+
+.first{
+    display: flex;
+    align-items: center;
+    width: 100px;
+
+  
+}
+header a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    border: 1px solid rgb(198, 198, 198);
+    background-color: rgb(221, 218, 218);
+    border-radius: 10px;  
+    padding: 20px;
+
+}
+header a:hover{
+    background-color: rgb(152, 149, 149);
+    transition: all;
+    transition: 1s;
+}
+main{
+
+    margin-top: 30px;
+}
+.start{
+    text-align: center;
+} 
+.word{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 300px;
+    font-size: 20px;
+    opacity: 0;
+   transition: 0.5s all ease 0.5s;
+   transition-duration: 1.5;
+}
+.heroes img{
+    width: 200px;
+    height: 400px;
+ 
+}
+
+.heroes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(109, 181, 203);
+    width: 250px;
+    height: 350px;
+    padding: 10px;
+    border-radius: 15px;
+    transition: all 1.5s  ;
+   transition-duration: 1s;
+   gap: 10px;
+   opacity: 0.8;
+}
+
+.heroes:hover{
+    padding-bottom: 200px;
+    opacity: 1;
+    width: 300px;
+    box-shadow: 10px 10px 5px 11px rgba(179,179,179,1);
+}
+.word:hover{
+    opacity: 1 ;
+    padding-bottom: 100px;
+  
+} 
+.characters-grid{
+    display: grid;
+    width: 100%;    
+    grid-template-columns: repeat(4,1fr);
+    gap: 60px;
+}
+.tuda-cuda img{
+    width: 70px;
+    animation: infinite 2s;
+    animation-name: rotate;
+} 
+.tuda-cuda{
+    position: absolute;
+    left: 10px;
+
+}
+.time img{
+    width: 70px;
+    animation: infinite 5s;
+    animation-name: time;
+    animation-timing-function:ease-in;
+} 
+.time{
+    position: absolute;
+    left: 380px; 
+
+}
+.mask img{
+        width: 70px;
+        animation: infinite 3s;
+        animation-name: opacity;
+        animation-timing-function:ease-in-out;
+        animation-delay: 9ms;
+}
+.mask{
+    position: absolute;
+    left: 750px;
+}
+.sword img{
+    width: 70px;
+    animation: infinite 3s;
+    animation-name: opacity;
+    animation-timing-function:ease-in-out;
+    animation-delay: 9ms;
+}
+.sword{
+    position: absolute;
+    right: 300px;
+}
+.train img{
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    transform: translateX(180px);
+    animation: 10s infinite;
+    animation-duration: 20s;
+    animation-name: run; 
+} 
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 70px;
+}
+.video{
+    border-radius: 20px;
+    padding: 50px;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   background-color: rgba(16, 142, 162, 0.296);
+   margin-top: 70px;
+}
+.table-charecters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+
+}
+table{
+    background-color: #d3d1d1;
+    border-spacing: 0;
+  
+}
+table th, td{
+    border: 1px solid black;
+    padding: 15px;
+}
+table th{
+  
+    background-color: #7c7c7c;
+}
+table tr:hover{
+   background-color: #a4a3a3;
+}
+
+
+
+
+@keyframes opacity{ 
+    0%{opacity: 0;}
+    50%{opacity: 1;}
+    100%{opacity: 0;}
+  }
+  @keyframes rotate{
+    0%{transform: rotateX(0deg);
+    }
+    50%
+    {transform:rotateX(80deg) ;}
+    80%
+    {
+      transform:rotateX(90deg)
+    }
+  
+    100%{
+      transform: rotateX(0deg);}
+    }
+
+@keyframes time{
+    0%{
+        rotate: 0deg;
+    }
+    20%{
+        rotate: 50deg;
+    }
+    40%{
+        rotate: 100deg;
+    }
+    60%{
+        rotate: 250deg;
+    }
+   80%{
+    rotate: 360deg;
+   }
+   100%{
+    rotate: 0deg;
+   }
+}
+@keyframes run{
+    0%{
+        left:0%;
+    }
+    10%{
+        left: 20%;
+    }
+    20%{
+        left: 40%;
+    }
+   40%{
+    left: 60%;
+    }
+ 
+    
+    100%{
+    left: 0%;
+    } 
+}
